@@ -79,8 +79,8 @@ DATABASES = {
         'NAME': 'scalewaywebsite',
         'USER': 'jaycee',
         'PASSWORD': 'jaycee',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
