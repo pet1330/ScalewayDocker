@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+    <meta name="description" content="A webpage for Jacobus Lock."/>
+    {% block extrahead %}
+    {% endblock %}
+  </head>
+  <body style="padding: 0px 0px 80px 0px; overflow-x: hidden;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="jumbotron" style="margin-bottom: 0px; background-color: transparent; padding: 24px 0px 24px 0px;">
+	    <img class="img-responsive center-block" src="{% static 'ScalewayWebsite/media/tango_header1.png' %}" alt="Jacobus Lock" width="100%">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9 col-md-offset-0 col-xs-10 col-xs-offset-1 col-md-push-3">
+	  <div class="row">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+		    <li><a href="{% url 'about' %}">About Me</a></li>
+		    <li><a href="{% url 'blog' %}">Blog</a></li>
+		    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+		    <li><a href="{% url 'publications' %}">Publications</a></li>
+		    <li><a href="{% url 'cv' %}">CV</a></li>
+		    <!--<li><a href="{% url 'contact' %}">Contact</a></li>-->
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+	  {% block content %}
+	  {% endblock %}
+        </div>
+	{% block sidebar_content %}
+	{% endblock %}
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

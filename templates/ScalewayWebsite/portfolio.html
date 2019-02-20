@@ -1,0 +1,229 @@
+{% extends 'ScalewayWebsite/base.html' %}
+
+{% load staticfiles %}
+
+{% block extrahead %}
+
+<title>Portfolio</title>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="page-header">
+    <h1>Portfolio</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Current and Ongoing</h4>
+      <hr>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+	      <a data-toggle="collapse" href="#ongoing1">
+                ActiVis
+	      </a>
+            </h5>
+          </div>
+          <div id="ongoing1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+              <b>Description: </b><br>
+                Recent advances in mobile technology have the potential to radically change the quality of tools available for people with sensory impairments, in particular the blind and partially sighted. Nowadays almost every smart-phone and tablet is equipped with high-resolution cameras, typically used for photos, videos, games and virtual reality applications. Very little has been proposed to exploit these sensors for user localisation and navigation instead. To this end, the “Active Vision with Human-in-the-Loop for the Visually Impaired” (ActiVis) project aims to develop a novel electronic travel aid to tackle the “last 10 yards problem” and enable blind users to independently navigate in unknown environments, ultimately enhancing or replacing existing solutions such as guide dogs and white canes. Furthermore, to overcome the problem of usability, sensor overload and a steep learning curve often associated with such devices, we intend to add an adaptive module to the navigation system that will monitor a user's use habits and skills and will adapt itself to better suit the individual user's limitations and strengths. <br><br>
+                For this project, we are using a Google Project Tango device as a sensor platform that takes in camera data and builds a 3D map with it. This information is then used to generate navigation signals and instructions for the user. These signal take the form of spatialised audio cues for 3D target acquisition, vibration to warn the user of obstacles in the way and voice prompts. On top of this, we intend to build a learning module that will monitor the entire interaction, i.e. navigation performance as a function of the feedback signal parameters. This module will then adapt these parameters over time in order to maximise performance.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                <a target="_blank" href="https://lcas.github.io/ActiVis/index.html">Project Page</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Past</h4>
+      <hr>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#past1">
+                Quadcopter Pose Estimation Accuracy
+              </a>
+            </h5>
+          </div>
+          <div id="past1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+                For this project, a research group in the concentrating solar power (CSP) field were looking into using quadrotor drones to autonomously clean and calibrate the heliostat fields at a CSP power plant. However, due to the precise nature of calibrating heliostats, the pose estimation error of a quadcopter had to be determined so that it could be integrated into the drone's model. <br><br>
+                To build this error model, we used a Vicon measurement system to generate a ground-truth dataset and built our own computer vision (CV) measurement system with which to compare it to. We opted for a CV system since its fairly robust, cheap and easy to use. The difference between or system's measurements and the ground-truth data provided us with an error dataset which we used to train a radial basis function neural network regression model which we can use to find the expected measurement error in the drone's 6 dimensions. We also found that this model's error estimates were within one standard deviation of the true error.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Paper available <a target="_blank" href="http://scholar.sun.ac.za/bitstream/handle/10019.1/98678/lock_pose_2016.pdf?sequence=2&isAllowed=y">here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#past2">
+                NFCPay
+              </a>
+            </h5>
+          </div>
+          <div id="past2" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+                The objective of this project was to make a cashless vending machine that gives the user an option to buy a product using NFC authentication, their student IDs or online web authentication. A central remote server was used as an authentication agent to track a user's credit and authorise transactions. All transactions and communication were fully secured and encrypted using a public/private key encryption scheme. <br><br>
+                The system was deployed with a purpose-built Android app and a real model vending machine that we built with a Raspberry PI; however, all the transactions used virtual credits and not real currency.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Paper available <a target="_blank" href="https://github.com/jayceelock/SkripsieVerslag/blob/master/document.pdf">here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Side Projects</h4>
+      <hr>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#side1">
+                Theremin
+              </a>
+            </h5>
+          </div>
+          <div id="side1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+                A virtual theremin instrument based on an Android app and a cellphone camera.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#side2">
+                Trackeroo
+              </a>
+            </h5>
+          </div>
+          <div id="side2" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+		An Android app and server back-end that tracks any food/drink specials in a user's area. I've halted development on this, so the source code is not available at this time. 
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#side3">
+		TrainLine
+              </a>
+            </h5>
+          </div>
+          <div id="side3" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+		A Raspberry Pi-based system to control a model town and trainset. Components include >1000 RGB LEDs, 5 DC motors, 10 OLED screens and a set of traffic lights, each individually controlled via a web interface and purpose-written API.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+		This project was done for a client and I don't have permission to publish the code. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#side4">
+		Echo Locate
+              </a>
+            </h5>
+          </div>
+          <div id="side4" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+		An Android app that listens for inaudible ultrasonic signals emitted from markers placed around a city and processes the information contained within the audio signal. This is done with a real-time Fourier transform processor.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+		This project was done for a client and I don't have permission to publish the code. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#side5">
+		PiLock
+              </a>
+            </h5>
+          </div>
+          <div id="side5" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+                <b>Description: </b><br>
+		A Raspberry Pi system that can control the access to different doors by locking/unlocking them and providing certain users access to certain rooms via a permissions system. This is all controlled and authenticated through a web interface and API.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+		This project was done for a client and I don't have permission to publish the code. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends 'ScalewayWebsite/base.html' %}
+
+{% block extrahead %}
+
+<title>Publications</title>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="page-header">
+    <h1>List of Publications</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Published Papers</h4>
+      <hr>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#published1">
+                A Portable Navigation System with an Adaptive Multimodal Interface for the Blind, <i>by Jacobus C. Lock, Grzegorz Cielniak and Nicola Bellotto</i>
+              </a>
+            </h5>
+          </div>
+          <div id="published1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+              <b>Abstract: </b>Recent advances in mobile technology have the potential to radically change the quality of tools available for people with sensory impairments, in particular the blind and partially sighted. Nowadays almost every smart-phone and tablet is equipped with high-resolution cameras, typically used for photos, videos, games and virtual reality applications. Very little has been proposed to exploit these sensors for user localisation and navigation instead. To this end, the “Active Vision with Human-in-the-Loop for the Visually Impaired” (ActiVis) project aims to develop a novel electronic travel aid to tackle the “last 10 yards problem” and enable blind users to independently navigate in unknown environments, ultimately enhancing or replacing existing solutions such as guide dogs and white canes. This paper describes some of the project’s key challenges, in particular with respect to the design of a user interface (UI) that translates visual information from the camera to guidance instructions for the blind person, taking into account the limitations introduced by visual impairment. In this paper we also propose a multimodal UI that caters to the needs of the visually impaired that exploits human-machine progressive co-adaptation to enhance the user’s experience and improve navigation performance.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Available <a target="_blank" href="https://www.aaai.org/ocs/index.php/SSS/SSS17/paper/view/15311">here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#published2">
+                An investigation into multi-dimensional prediction models to estimate the pose error of a quadcopter in a CSP plant setting, <i>by Jacobus C. Lock, J. Treurnicht and WJ Smit</i>
+              </a>
+            </h5>
+          </div>
+          <div id="published2" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+              <b>Abstract: </b>The Solar Thermal Energy Research Group (STERG) is investigating ways to make heliostats cheaper to reduce the total cost of a concentrating solar power (CSP) plant. One avenue of research is to use unmanned aerial vehicles (UAVs) to automate and assist with the heliostat calibration process. To do this, the pose estimation error of each UAV must be determined and integrated into a calibration procedure. A computer vision (CV) system is used to measure the pose of a quadcopter UAV. However, this CV system contains considerable measurement errors. Since this is a high-dimensional problem, a sophisticated prediction model must be used to estimate the measurement error of the CV system for any given pose measurement vector. This paper attempts to train and validate such a model with the aim of using it to determine the pose error of a quadcopter in a CSP plant setting.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Available <a target="_blank" href="https://aip.scitation.org/doi/abs/10.1063/1.4949222">here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Unpublished Internal Papers</h4>
+      <hr>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#unpublished1">
+                Audio Interface of a Navigation Aid for the Visually Impaired, <i>by Jacobus C. Lock, Grzegorz Cielniak, Iain Gilchrest and Nicola Bellotto</i>
+              </a>
+            </h5>
+          </div>
+          <div id="unpublished1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+              <b>Abstract: </b>Our aim is to build a navigation system for the visually impaired that uses a combination of feedback modes to guide the user to his/her destination. In this paper, we investigate the effectiveness of a spatial audio tone with a varying pitch component, played with bone-conducting headphones, in conveying the pan and tilt angles of a target to the user in a pointing task. We also wish to see how changes in the behaviour of the pitch affects a user's performance. We conducted a set of experiments with blindfolded users and found that the varying pitch component works well in conveying the tilt angle of a target. Furthermore, we were able to determine that the audio interface adheres to Fitts's Law and used it as a metric to determine which pitch setting produces the best results. We discovered a trade-off between the speed and accuracy in the pointing task, which are maximised when the tone-settings is adjusted to low and high respectively. 
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Available upon request from the authors
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Relevant Reading</h4>
+      <hr>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#relevant1">
+                Progressive Co-adaptation in Human-machine Interaction, <i>by Paolo Gallina, Nicola Bellotto and Massimiliano Di Luca</i>
+              </a>
+            </h5>
+          </div>
+          <div id="relevant1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+              <b>Abstract: </b>In this paper we discuss the concept of co-adaptation between a human operator and a machine interface and we summarize its application with emphasis on two different domains, teleoperation and assistive technology. The analysis of the literature reveals that only in a few cases the possibility of a temporal evolution of the co-adaptation parameters has been considered. In particular, it has been overlooked the role of time-related indexes that capture changes in motor and cognitive abilities of the human operator. We argue that for a more effective long-term co-adaptation process, the interface should be able to predict and adjust its parameters according to the evolution of human skills and performance. We thus propose a novel approach termed progressive co-adaptation, whereby human performance is continuously monitored and the system makes inferences about changes in the users’ cognitive and motor skills. We illustrate the features of progressive co-adaptation in two possible applications, robotic telemanipulation and active vision for the visually impaired.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Available <a target="_blank" href="http://eprints.lincoln.ac.uk/17501/1/17501%20Gallina2015.pdf">here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              <a data-toggle="collapse" href="#relevant2">
+                A Multimodal Smartphone Interface for Active Perception by Visually Impaired, <i>by Paolo Gallina, Nicola Bellotto and Massimiliano Di Luca</i>
+              </a>
+            </h5>
+          </div>
+          <div id="relevant2" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p class="text-justify">
+              <b>Abstract: </b>The diffuse availability of mobile devices, such as smartphones and tablets, has the potential to bring substantial benefits to the people with sensory impairments. The solution proposed in this paper is part of an ongoing effort to create an accurate obstacle and hazard detector for the visually impaired, which is embedded in a hand-held device. In particular, it presents a proof of concept for a multimodal interface to control the orientation of a smartphone’s camera, while being held by a person, using a combination of vocal messages, 3D sounds and vibrations. The solution, which is to be evaluated experimentally by users, will enable further research in the area of active vision with human-in-the-loop, with potential application to mobile assistive devices for indoor navigation of visually impaired people.
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                Available <a target="_blank" href="http://eprints.lincoln.ac.uk/11636/1/Bellotto2013.pdf">here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of paper div -->
+    </div>
+  </div>
+</div>
+
+{% endblock %}

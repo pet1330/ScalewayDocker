@@ -1,0 +1,26 @@
+{% extends 'ScalewayWebsite/base.html' %}
+
+{% block extrahead %}
+
+<title>About Jacobus</title>
+
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="row">
+  <div class="page-header">
+    <h1>About me</h1>
+  </div>
+  <p class="text-justify">
+    I am a PhD student at the University of Lincoln, UK, at the School of Computer Science and I am a member of the Lincoln Centre for Autonomous Systems Research (L-CAS). 
+    <br><br>
+    My current research is focussed on finding a novel way to combine machine learning, computer vision and human-machine interaction to create an indoor navigation system for the visually impaired that can adapt itself to suit the needs and limitations of the individual user by learning his/her habits over time. The goal here is to provide a visually impaired user with a working navigation system without exposing them to a steep learning curve or losing any navigation performance in terms of target localisation. 
+    <br><br> 
+    Our system is based on a Google Project Tango device that allows us to find a 3D map of the environment and use that information to find any obstacles in the user's path. We then use a combination of vibration, spatialised audio cues and voice prompts to guide the user to his/her target destination while warning them of any oncoming obstacles. 
+  </p>
+</div>
+
+{% endblock %}

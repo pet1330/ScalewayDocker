@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block sidebar_content %}
+
+<div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0 col-md-pull-9">
+  <div class="row text-center hidden-sm hidden-xs" style="padding: 0px 0px 0px 0px;">
+    <img class="img-rounded img-responsive center-block" src="{% static 'ScalewayWebsite/media/profile_small.jpg' %}" alt="Jacobus Lock" width="60%">  
+  </div>
+  <div class="row center-block" style="padding: 25px 25px 25px 25px;"> 
+    <ul class="list-group">
+      <li class="list-group-item text-center"><a href="http://lcas.lincoln.ac.uk/wp/">L-CAS Home</a></li>
+      <li class="list-group-item text-center"><a href="https://scholar.google.co.uk/citations?user=MLYdvnwAAAAJ&hl=en&oi=pll">Google Scholar Page</a></li>
+    </ul>
+  </div>
+  <div class="row center-block text-center">
+    <p> 
+      Lincoln Centre for Autonomous Systems,<br>
+      School of Computer Science<br>
+      University of Lincoln, UK<br>
+    </p>
+    <p>
+      Telephone: +44 (0)5122 886897<br>
+    </p>
+  </div>
+  <div class="row center-block text-center">
+    <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-10 col-md-offset-1"> 
+      <a class="btn btn-social-icon btn-github" href="mailto:jlock@lincoln.ac.uk?Subject=Hi" target="_top">
+        <span class="fa fa-envelope"></span>
+      </a>
+      <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/jayceelock">
+        <span class="fa fa-twitter"></span>
+      </a>
+      <a class="btn btn-social-icon btn-github" href="http://github.com/jayceelock">
+        <span class="fa fa-github"></span>
+      </a>
+      <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/jacobus-lock/">
+        <span class="fa fa-linkedin"></span>
+      </a>
+      <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/jayceelock">
+        <span class="fa fa-instagram"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+

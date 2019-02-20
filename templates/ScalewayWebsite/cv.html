@@ -1,0 +1,24 @@
+{% extends 'ScalewayWebsite/base.html' %}
+
+{% block extrahead %}
+
+<title>Curriculum Vitae</title>
+
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="row">
+  <div class="page-header">
+    <h1>Curriculum Vitae</h1>
+  </div>
+  <div class="col-md-12">
+    <a href="{% static 'ScalewayWebsite/cv/cv.pdf' %}">
+      <img src="{% static 'ScalewayWebsite/cv/cv.png' %}" class="img-responsive" width="100%">
+    </a>
+  </div>
+</div>
+
+{% endblock %}
