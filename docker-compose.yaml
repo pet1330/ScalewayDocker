@@ -1,21 +1,28 @@
-version: '3.7'
+version: '3'
 
 services:
   db:
-    image: postgres:10.7-alpine
+    image: postgres
     environment:
       - POSTGRES_DB=scalewaywebsite
       - POSTGRES_USER=jaycee
       - POSTGRES_PASSWORD=jaycee
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
-      - .:/docker-entrypoint-initdb.d
+      - ./postgres_data:/var/lib/postgresql/data/
+      #- .:/docker-entrypoint-initdb.d
     expose:
-      - "5432"
+      - 5432
   web:
     build: .
-    command: python /jclock/ScalewayWebsite/manage.py runserver 0.0.0.0:8000
-             #/usr/local/sbin/uwsgi \
+    image: scalewaywebsite
+    command: /usr/local/bin/uwsgi 
+             #--chdir=/jclock/ScalewayWebsite \
+             #--module=ScalewayWebsite.wsgi:application \
+             #--env DJANGO_SETTINGS_MODULE=ScalewayWebsite.settings \
+             #--http=127.0.0.1:8000 
+             #--socket=0.0.0.0:8000 \ # For nginx
+             #
+             #/usr/bin/uwsgi \
              #--chdir=/var/django/projects/myapp \
              #--module=myapp.wsgi:application \
              #--env DJANGO_SETTINGS_MODULE=myapp.settings \
@@ -27,12 +34,24 @@ services:
              #--max-requests=5000 \
              #--vacuum \
              #--daemonize=/usr/local/var/log/uwsgi/myapp.log
-    volumes:
-      - .:/jclock
+             #python ScalewayWebsite/manage.py runserver 0.0.0.0:8000
+    links:
+      - db
     ports:
       - 8000:8000
+    volumes:
+      - .:/jclock
+    #expose:
+      #- 8000
     depends_on:
       - db
+
+  #proxy:
+    #image: nginx:latest
+    #volumes:
+            #- ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+        #- ./:/jclock
+
 
 volumes:
   postgres_data:
