@@ -6,7 +6,7 @@ RUN mkdir /jclock
 WORKDIR /jclock
 
 # Install build files
-RUN apt-get update && apt-get install -y build-essential git
+RUN apt-get update && apt-get install -y build-essential
 
 # Install dependencies
 RUN pip install pipenv
@@ -24,7 +24,6 @@ ENV PYTHONUNBUFFERED 1
 
 # uWSGI configuration (customize as needed):
 #ENV UWSGI_WSGI_FILE=ScalewayWebsite/ScalewayWebsite.wsgi UWSGI_HTTP=:8000 UWSGI_MASTER=1 UWSGI_WORKERS=2 UWSGI_THREADS=8 UWSGI_UID=1000 UWSGI_GID=2000 UWSGI_LAZY_APPS=1 UWSGI_WSGI_ENV_BEHAVIOR=holy
-
 
 #COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 #EXPOSE 8000

@@ -19,7 +19,11 @@ services:
       - db
     #command: ["bash", "/jclock/wait-for-it.sh", "db:5432", "--", "python", "ScalewayWebsite/manage.py", "runserver", "0.0.0.0:8000"] #python ScalewayWebsite/manage.py runserver 0.0.0.0:8000
     #command: python ScalewayWebsite/manage.py runserver 0.0.0.0:8000
-    command: /usr/local/bin/uwsgi --http=0.0.0.0:8000 --chdir=/jclock/ScalewayWebsite/ --module=ScalewayWebsite.wsgi
+    command: /usr/local/bin/uwsgi \
+             --http=0.0.0.0:8000 \
+             --chdir=/jclock/ScalewayWebsite/ \
+             --module=ScalewayWebsite.wsgi
+
              #--chdir=/jclock/ScalewayWebsite \
              #--module=ScalewayWebsite.wsgi:application \
              #--http=127.0.0.1:8000 
@@ -44,16 +48,15 @@ services:
       - 8000:8000
     volumes:
       - .:/jclock
-      - ./wait-for-it.sh:/jclock/wait-for-it.sh
+      - ./wait-for-it.sh:/wait-for-it.sh
     #expose:
       #- 8000
 
-  #proxy:
-    #image: nginx:latest
-    #volumes:
-            #- ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-        #- ./:/jclock
-
+  proxy:
+    image: nginx:latest
+    volumes:
+        - ./scalewaywebsite_nginx.conf:/etc/nginx/conf.d/default.conf
+        - .:/jclock
 
 volumes:
   postgres_data:
