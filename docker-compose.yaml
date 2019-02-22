@@ -17,13 +17,13 @@ services:
     image: scalewaywebsite
     depends_on:
       - db
-    command: ["bash", "/jclock/wait-for-it.sh", "db:5432", "--", "python", "ScalewayWebsite/manage.py", "runserver", "0.0.0.0:8000"] #python ScalewayWebsite/manage.py runserver 0.0.0.0:8000
+    #command: ["bash", "/jclock/wait-for-it.sh", "db:5432", "--", "python", "ScalewayWebsite/manage.py", "runserver", "0.0.0.0:8000"] #python ScalewayWebsite/manage.py runserver 0.0.0.0:8000
     #command: python ScalewayWebsite/manage.py runserver 0.0.0.0:8000
-    #command: /usr/local/bin/uwsgi 
+    command: /usr/local/bin/uwsgi --http=0.0.0.0:8000 --chdir=/jclock/ScalewayWebsite/ --module=ScalewayWebsite.wsgi
              #--chdir=/jclock/ScalewayWebsite \
              #--module=ScalewayWebsite.wsgi:application \
-             #--env DJANGO_SETTINGS_MODULE=ScalewayWebsite.settings \
              #--http=127.0.0.1:8000 
+             #--env DJANGO_SETTINGS_MODULE=ScalewayWebsite.settings \
              #--socket=0.0.0.0:8000 \ # For nginx
              #
              #/usr/bin/uwsgi \
@@ -44,7 +44,7 @@ services:
       - 8000:8000
     volumes:
       - .:/jclock
-      - ./wait-for-it.sh:/jclock/wait-for-it-sh
+      - ./wait-for-it.sh:/jclock/wait-for-it.sh
     #expose:
       #- 8000
 
