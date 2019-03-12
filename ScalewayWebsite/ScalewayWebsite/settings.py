@@ -25,7 +25,7 @@ SECRET_KEY = 'cvbz+%2!17d8yt*fqpwuuk^u6$ajn&f_u8^=1as@bv&0k7^p#k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jclock.co.uk', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['jclock.co.uk', '127.0.0.1', 'localhost', '0.0.0.0']
 
 
 # Application definition
@@ -122,4 +122,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ( os.path.join('static'), )
+STATICFILES_DIRS = (os.path.join('static'), )
