@@ -1,3 +1,0 @@
-CREATE DATABASE scalewaywebsite;
-CREATE USER jaycee WITH ENCRYPTED PASSWORD 'jaycee';
-GRANT ALL PRIVILEGES ON DATABASE scalewaywebsite TO jaycee;
